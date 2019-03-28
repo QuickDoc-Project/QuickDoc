@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.quickdoc">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.fingerprint"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/HiddenTitleTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Hospitals"></activity>
+        <activity android:name=".Feedback" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ContactUs" />
+        <activity android:name=".FAO" />
+        <activity android:name=".AboutUs" />
+        <activity android:name=".MyProfile" />
+        <activity android:name=".hello" />
+        <activity android:name=".Orthopedician" />
+        <activity android:name=".Dietitian" />
+        <activity android:name=".Pediatrician" />
+        <activity android:name=".Dermatologist" />
+        <activity android:name=".Gynaecologist" />
+        <activity android:name=".Physician" />
+        <activity android:name=".Emergency" />
+        <activity android:name=".Extras" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".Login" />
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="QuickDoc">
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FingerprintActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

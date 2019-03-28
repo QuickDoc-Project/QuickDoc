@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="51dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/quickdoclogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/scrollingtext"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="106dp"
+            android:layout_marginRight="106dp"
+            android:background="@color/trans"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="QuickDoc : Get a Doctor at your Doorstep."
+            android:textSize="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="395dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/back"
+            app:cardBackgroundColor="@color/trans"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="137dp"
+                android:layout_height="120dp"
+                android:layout_gravity="left|center_vertical"
+                android:paddingRight="10dp"
+                app:srcCompat="@drawable/homebutton" />
+
+            <Button
+                android:id="@+id/btHome"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="131dp"
+                android:layout_height="110dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@color/trans" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_gravity="right|center_vertical"
+                android:paddingRight="20dp"
+                app:srcCompat="@drawable/settings2" />
+
+            <Button
+                android:id="@+id/btSettings"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center|right"
+                android:background="@color/trans" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="85dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/emergency" />
+
+            <Button
+                android:id="@+id/btnEmergency"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="105dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:background="@color/trans" />
+
+        </android.support.v7.widget.CardView>
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollingtext"
+            app:layout_constraintVertical_bias="0.0">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/phyhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="148dp"
+                    android:layout_marginLeft="148dp"
+                    android:layout_marginEnd="148dp"
+                    android:layout_marginRight="148dp"
+                    android:text="PHYSICIAN"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/phycont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Physicians help with common health issues such as fever, cough, throat pain, loose motion, gas, high BP, migraine, vomiting, constipation, high cholesterol, diabetes, blocked nose, low BP, runny nose, body pain, chest pain. Click below to get a reliable consultation and allow us to take care of you!"
+                    android:textColor="@color/etcolor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phyhead" />
+
+                <Button
+                    android:id="@+id/physician"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="131dp"
+                    android:layout_marginRight="131dp"
+                    android:background="@color/trans"
+                    android:text="Click here"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phycont" />
+
+                <TextView
+                    android:id="@+id/gynhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="115dp"
+                    android:layout_marginRight="115dp"
+                    android:text="GYNAECOLOGIST"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/physician" />
+
+                <TextView
+                    android:id="@+id/gyncont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Gynaecologists guide you with issues such as delayed/missed periods, confirmation of pregnany, pregnancy care, vomiting/nausea, thyroid problems, unable to conceive, IVF/IUI related queries, tubal block and miscarriages. Click below to get a reliable consultation and allow us to take care of you!"
+                    android:textColor="@color/etcolor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gynhead" />
+
+                <Button
+                    android:id="@+id/gynaecologist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginRight="130dp"
+                    android:background="@color/trans"
+                    android:text="Click here"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gyncont" />
+
+                <TextView
+                    android:id="@+id/derhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="DERMATOLOGIST"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gynaecologist" />
+
+                <TextView
+                    android:id="@+id/dercont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Dermatologists treat issues such as skin infections, tan, hyperpigmentation, graying of hair, hair loss, pimples, acne, rashes, itching, hairfall, reddish skin, spots on skin, dark circles, dandruff and much more. Click below to get a reliable consultation and allow us to take care of you!"
+                    android:textColor="@color/etcolor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/derhead" />
+
+                <Button
+                    android:id="@+id/dermatologist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginRight="130dp"
+                    android:background="@color/trans"
+                    android:text="Click here"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dercont" />
+
+                <TextView
+                    android:id="@+id/pedhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="PEDIATRICIAN"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dermatologist" />
+
+                <TextView
+                    android:id="@+id/pedcont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Pediatricians/Child experts advice on child's health, nutrition and fitness needs. They treat illnesses, infections, injuries and other health problems. Click below to get a reliable consultation and allow us to take care of you!"
+                    android:textColor="@color/etcolor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pedhead" />
+
+                <Button
+                    android:id="@+id/pediatrician"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginRight="130dp"
+                    android:background="@color/trans"
+                    android:text="Click here"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pedcont" />
+
+                <TextView
+                    android:id="@+id/diethead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="DIETITIAN"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pediatrician" />
+
+                <TextView
+                    android:id="@+id/dietcont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Dietitians attend to your unique lifestyle and nutrition needs: food allergies, weight loss diets, pregnancy diet, disease specific diet, diet for diabetes, hypertension, PCOD and overall wellness. Click below to get a reliable consultation and allow us to take care of you!"
+                    android:textColor="@color/etcolor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/diethead" />
+
+                <Button
+                    android:id="@+id/dietitian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginRight="130dp"
+                    android:background="@color/trans"
+                    android:text="Click here"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dietcont" />
+
+                <TextView
+                    android:id="@+id/orthead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="ORTHOPEDICIAN"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dietitian" />
+
+                <TextView
+                    android:id="@+id/ortcont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Orthopedists are known to treat bone and joint aches such as back, shoulder, knee, neck, elbow pain, arthritis, osteoarthritis, rheumatoid arthritis and fix your posture to avoid complications. Click below to get a reliable consultation and allow us to take care of you!"
+                    android:textColor="@color/etcolor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orthead" />
+
+                <Button
+                    android:id="@+id/orthopedician"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="130dp"
+                    android:layout_marginLeft="130dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginRight="130dp"
+                    android:background="@color/trans"
+                    android:text="Click here"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ortcont" />
+
+                <TextView
+                    android:id="@+id/hospihead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:text="HOSPITALS"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/orthopedician" />
+
+                <Button
+                    android:id="@+id/hospi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/trans"
+                    android:text="Kokilaben Dhirubhai Ambani Hospital"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hospihead" />
+
+                <TextSwitcher
+                    android:id="@+id/textswitcher1"
+                    android:layout_width="356dp"
+                    android:layout_height="67dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:inAnimation="@android:anim/slide_in_left"
+                    android:outAnimation="@android:anim/slide_out_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hospi1" />
+
+                <Button
+                    android:id="@+id/nextstep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/trans"
+                    android:text="Next Step"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textswitcher1" />
+
+                <CalendarView
+                    android:id="@+id/calendarView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nextstep" />
+
+                <Button
+                    android:id="@+id/maps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/trans"
+                    android:text="Maps"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView1" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

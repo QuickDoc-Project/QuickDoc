@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/back"
+    tools:context=".Gynaecologist">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/quickdoclogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="395dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/back"
+            app:cardBackgroundColor="@color/trans"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nested">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="137dp"
+                android:layout_height="120dp"
+                android:layout_gravity="left|center_vertical"
+                android:paddingRight="10dp"
+                app:srcCompat="@drawable/homebutton" />
+
+            <Button
+                android:id="@+id/btHome"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="131dp"
+                android:layout_height="110dp"
+                android:layout_gravity="left|center_vertical"
+                android:background="@color/trans" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="85dp"
+                android:layout_height="85dp"
+                android:layout_gravity="right|center_vertical"
+                android:paddingRight="20dp"
+                app:srcCompat="@drawable/settings2" />
+
+            <Button
+                android:id="@+id/btSettings"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center|right"
+                android:background="@color/trans" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="85dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/emergency" />
+
+            <Button
+                android:id="@+id/btnEmergency"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="105dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:background="@color/trans" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/phycard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="235dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#FEFEFE"
+                    app:cardCornerRadius="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:cardElevation="4dp">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/phydoc1"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="28dp"
+                            android:src="@drawable/female1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/doc1name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="28dp"
+                            android:textColor="#000000"
+                            android:text="Name : Total Women"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/doc1qual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Qualification : MS(Obstetrics and Gynaecology)"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc1"
+                            app:layout_constraintTop_toBottomOf="@+id/doc1name" />
+
+                        <TextView
+                            android:id="@+id/doc1fees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:text="Visiting Fee : Rs.700/-"
+                            android:textColor="#000000"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc1"
+                            app:layout_constraintTop_toBottomOf="@+id/doc1qual" />
+
+                        <TextView
+                            android:id="@+id/doc1exp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Experience : 4 years"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc1"
+                            app:layout_constraintTop_toBottomOf="@+id/doc1fees" />
+
+
+                        <Button
+                            android:id="@+id/doc1no"
+                            android:layout_width="121dp"
+                            android:layout_height="38dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/trans"
+                            android:text="Book an appointment"
+                            android:textColor="#A50B5E"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc1"
+                            app:layout_constraintTop_toBottomOf="@+id/doc1exp" />
+
+                        <TextView
+                            android:id="@+id/doc1area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Area : Dahisar (East)"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc1"
+                            app:layout_constraintTop_toBottomOf="@+id/doc1exp" />
+
+                        <Button
+                            android:id="@+id/doc1loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="41dp"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/trans"
+                            android:text="Locate on maps"
+                            android:textColor="#A50B5E"
+                            android:onClick="browser1"
+                            app:layout_constraintStart_toEndOf="@+id/doc1no"
+                            app:layout_constraintTop_toBottomOf="@+id/doc1exp" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/phycard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="235dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#FEFEFE"
+                    app:cardCornerRadius="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phycard1"
+                    app:cardElevation="4dp">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/phydoc2"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="28dp"
+                            android:src="@drawable/female9"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/doc2name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="28dp"
+                            android:text="Name : Dr. Ranjana Vilas Dhanu"
+                            android:textColor="#000000"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/doc2qual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Qualification : MS(Obstetrics and Gynaecology)"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc2"
+                            app:layout_constraintTop_toBottomOf="@+id/doc2name" />
+
+                        <TextView
+                            android:id="@+id/doc2fees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:text="Visiting Fee : Rs.700/-"
+                            android:textColor="#000000"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc2"
+                            app:layout_constraintTop_toBottomOf="@+id/doc2qual" />
+
+                        <TextView
+                            android:id="@+id/doc2exp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Experience : 4 years"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc2"
+                            app:layout_constraintTop_toBottomOf="@+id/doc2fees" />
+
+                        <Button
+                            android:id="@+id/doc2no"
+                            android:layout_width="121dp"
+                            android:layout_height="38dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/trans"
+                            android:text="Book an appointment"
+                            android:textColor="#A50B5E"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc2"
+                            app:layout_constraintTop_toBottomOf="@+id/doc2exp" />
+
+                        <TextView
+                            android:id="@+id/doc2area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Area : Khar (West)"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc2"
+                            app:layout_constraintTop_toBottomOf="@+id/doc2exp" />
+
+                        <Button
+                            android:id="@+id/doc2loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="41dp"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/trans"
+                            android:text="Locate on maps"
+                            android:textColor="#A50B5E"
+                            android:onClick="browser2"
+                            app:layout_constraintStart_toEndOf="@+id/doc2no"
+                            app:layout_constraintTop_toBottomOf="@+id/doc2exp" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/phycard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="235dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    app:cardBackgroundColor="#FEFEFE"
+                    app:cardCornerRadius="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phycard2"
+                    app:cardElevation="4dp">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/phydoc3"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="28dp"
+                            android:src="@drawable/female10"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/doc3name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="28dp"
+                            android:textColor="#000000"
+                            android:text="Name : Dr.Sangeeta Agrawal"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/doc3qual"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Qualification : MS(Obstetrics and Gynaecology)"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc3"
+                            app:layout_constraintTop_toBottomOf="@+id/doc3name" />
+
+                        <TextView
+                            android:id="@+id/doc3fees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:text="Visiting Fee : Rs.700/-"
+                            android:textColor="#000000"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc3"
+                            app:layout_constraintTop_toBottomOf="@+id/doc3qual" />
+
+                        <TextView
+                            android:id="@+id/doc3exp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Experience : 4 years"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc3"
+                            app:layout_constraintTop_toBottomOf="@+id/doc3fees" />
+
+                        <Button
+                            android:id="@+id/doc3no"
+                            android:layout_width="121dp"
+                            android:layout_height="38dp"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/trans"
+                            android:textColor="#A50B5E"
+                            android:text="Book an appointment"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc3"
+                            app:layout_constraintTop_toBottomOf="@+id/doc3exp" />
+
+                        <TextView
+                            android:id="@+id/doc3area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="40dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="#000000"
+                            android:text="Area : Prabhadevi"
+                            app:layout_constraintStart_toEndOf="@+id/phydoc3"
+                            app:layout_constraintTop_toBottomOf="@+id/doc3exp" />
+
+                        <Button
+                            android:id="@+id/doc3loc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="41dp"
+                            android:layout_marginStart="36dp"
+                            android:layout_marginLeft="36dp"
+                            android:layout_marginTop="40dp"
+                            android:background="@color/trans"
+                            android:textColor="#A50B5E"
+                            android:text="Locate on maps"
+                            android:onClick="browser3"
+                            app:layout_constraintStart_toEndOf="@+id/doc3no"
+                            app:layout_constraintTop_toBottomOf="@+id/doc3exp" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
